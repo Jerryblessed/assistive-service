@@ -1,4 +1,4 @@
-# Personal Health Assistance
+# Assistive service
 ### Stack we used
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -8,11 +8,11 @@
 
 Features!
 
-Patients login
-Doctor Login
-Doctor Add & Delete the Task (appointments etc)
+customer login
+shop owners Login
+shop owners Add & Delete the Task (meetings etc)
 Task (Appointment, medicience dosage record, health tracker)
-Doctor Check the task and appointment
+shop owners Check the task and appointment
 Notification
 Individiual Chat
 
