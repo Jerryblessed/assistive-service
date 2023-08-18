@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfers and bills</title>
+    <link rel="stylesheet" href="{% static 'blog/css/tag/livestream.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="maj">
+        <div class="div1">
+            <nav>
+
+                <img src="{% static 'img/tag/logo2.png'%}" alt="" class="logo">
+                <ul>
+                    <li><a href="{% url 'index' %}" id="a"><i class="fa-solid fa-table-columns"> </i>
+                            <p>...Dashboard</p>
+                        </a></li>
+                    <li><a href="{%url 'blog:categories_list'%}"id="b"><i class="fa-solid fa-book-open-reader"></i>
+                            <p>...Product and Service</p>
+                        </a></li>
+                    {% comment %} <li><a href="notepage.html" id="b"><i class="fa-solid fa-book"></i>
+                            <p> Notes</p>
+                        </a></li> {% endcomment %}
+                    <li><a href="{% url 'livestream' %}" id="c"><i class="fa fa-podcast" aria-hidden="true"></i>
+                            <p>...Transfers</p>
+                        </a></li>
+                        {% comment %}
+                    <li><a href="notification.html" id="d"><i class="fa-solid fa-bell"></i>
+                            <p>Notification </p>
+                        </a></li> {% endcomment %}
+                    <li><a href="{% url 'inbox' %}" id="e"><i class="fa-solid fa-comments"> </i>
+                            <p>...Chat</p>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="div2">
+            <a href="{% url 'broadcast_l' %}" > <p id="wel"><i class="fa fa-podcast" aria-hidden="true"></i> Search for transferee </p> </a>
+            <a href="notification.html"><i class="fa-solid fa-bell" id="bell"></i></a>
+            <a href="profile.html"> <img src="{{user.profile.image.url}}" alt="" srcset="" id="bit"></a>
+            <div class="per">
+                <a href="#">
+                    <p>{{user.username}} <i class="fa-solid fa-chevron-down"></i></p>
+                </a>
+            <ul class="dropdown">
+                    <li><a href="{% url 'savedpq' %} ">Profile</a></li>
+                    {% comment %} <li><a href="{% url  'blog:author_profile_update' %}" id="sch">Schedule Livestream</a></li>
+                    <li><a href="universities-pastquestions.html">Test Yourself</a></li> {% endcomment %}
+                    <li><a href="{% url 'logout' %}">Logout!</a></li>
+           </ul>
+            </div>
+        </div>
+        <!-- div3 -->
+        {% comment %} <div class="div3">
+            <li id="li">27 <br>Apr</li>
+            <div class="info">
+                <p>UPCOMING LIVESTREAM</p>
+                <P>GEC 321 TUTORIALS</P>
+                <P><i class="fa-solid fa-calendar-days"></i> Wednesday <i class="fa-solid fa-circle"></i> 3:27pm <i
+                        class="fa-solid fa-circle"></i> 45 Minutes</P>
+                <!-- <img src="bitmoji.jpeg" alt=""> -->
+                <p> <img src="bitmoji.jpeg" alt="">Babalola Paul</p>
+            </div>
+            <ul>
+                <li>00</li>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <li>00</li>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <li>00</li>
+            </ul>
+        </div> {% endcomment %}
+        <div class="div4">
+            <div class="divv">
+                <p class="up">Transfer Funds</p>
+                <ul>
+
+                    <!-- Modify the relevant li elements to include the address as a data attribute -->
+                    <li data-address="rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe">
+                        <p class="gec">XRL wallet address:</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a><i class="fa-solid fa-circle"></i> <i
+                                class="fa-solid fa-circle"></i> </P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">James Ope</p>
+                    </li>
+                    <!-- Add more li elements with different addresses if needed -->
+
+                    <!-- Modify the relevant li elements to include the address as a data attribute -->
+                    <li data-address="rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe">
+                        <p class="gec">XRL wallet address:</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a><i class="fa-solid fa-circle"></i> <i
+                                class="fa-solid fa-circle"></i> </P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">James Ope</p>
+                    </li>
+                    <!-- Add more li elements with different addresses if needed -->
+
+                    <!-- Modify the relevant li elements to include the address as a data attribute -->
+                    <li data-address="rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe">
+                        <p class="gec">XRL wallet address:</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a><i class="fa-solid fa-circle"></i> <i
+                                class="fa-solid fa-circle"></i> </P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">John Ope</p>
+                    </li>
+                    <!-- Add more li elements with different addresses if needed -->
+
+                    <!-- Modify the relevant li elements to include the address as a data attribute -->
+                    <li data-address="rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe">
+                        <p class="gec">XRL wallet address:</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a><i class="fa-solid fa-circle"></i> <i
+                                class="fa-solid fa-circle"></i> </P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Jousha Ope</p>
+                    </li>
+                    <!-- Add more li elements with different addresses if needed -->
+
+
+                </ul>
+            </div>
+            <div class="saved">
+                <p class="up">Pay Bills</p>
+                <ul>
+                    <li>
+                        <p class="gec">School Fees</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a></P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>
+                    <li>
+                        <p class="gec">Light bill</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a></P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>
+                    <li>
+                        <p class="gec">Flight bill</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a></P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>
+                    <li>
+                        <p class="gec">Interet bill</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a></P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>
+                    <li>
+                        <p class="gec">Water bills</p>
+                        <P class="date"><a href="https://kvz6tr-8080.csb.app/app">rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe</a></P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>3
+                    <li>
+                        <p class="gec">GEC 321 TUTORIALS</p>
+                        <P class="date">45 Minutes</P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>
+                    <li>
+                        <p class="gec">GEC 321 TUTORIALS</p>
+                        <P class="date">45 Minutes</P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>
+                    <li>
+                        <p class="gec">GEC 321 TUTORIALS</p>
+                        <P class="date">45 Minutes</P>
+                        <img src="bitmoji.jpeg" alt="">
+                        <p class="baba">Babalola Paul</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
